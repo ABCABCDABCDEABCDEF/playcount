@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '1 20 * * *'
+    # cron表达式，Actions时区是UTC时间，所以上午9点要往前推8个小时
+
+
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          python bilibili_noproxy.py
