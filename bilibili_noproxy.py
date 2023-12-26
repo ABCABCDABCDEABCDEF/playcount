@@ -3,7 +3,7 @@ import time
 
 # BVID放这里 格式: ["视频1id","视频2id","视频3id"...], BV号获取 https://www.bilibili.com/video/{这里就是BVID}/
 
-bvids = ["BV1cN4y1r7pA"]
+bvids = ["BV1cN4y1r7pA","BV1cu4y1a7Ub","BV1xy4y1c7Zr","BV1kz4y1N7M6","BV1XH4y1z7ow","BV17w411B7uh","BV1Pc411o7Gz","BV1DH4y1z73U","BV1sN411379n","BV1DQ4y1J7b7"]
     
 def print_log(msg):
     # 直接print()在Docker中不会显示, 所以要家flush=True
